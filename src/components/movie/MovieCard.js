@@ -6,13 +6,11 @@ const MovieCard = ({ movie, posterPath }) => {
 
   if (!posterPath) return null;
 
-  const onMovieClickHandler = () => {
-    console.log(movie);
-    navigate("/browse/movie", { state: movie });
-  };
-
   return (
-    <div className="w-36 md:w-48 pr-4" onClick={onMovieClickHandler}>
+    <div
+      className="w-36 md:w-48 pr-4"
+      onClick={() => navigate("/browse/movie", { state: movie })}
+    >
       <img alt="Movie Card" src={IMG_CDN_URL + posterPath} />
     </div>
   );
