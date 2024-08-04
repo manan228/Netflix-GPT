@@ -10,7 +10,7 @@ const PrivateRoute = ({ children }) => {
 
   useEffect(() => {
     if (location.pathname === "/login" && user) navigate("/browse");
-  });
+  }, [location.pathname, user, navigate]);
 
   return <>{user ? children : <Login />}</>;
 };
