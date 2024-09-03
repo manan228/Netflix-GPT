@@ -9,7 +9,7 @@ import {
 import { auth } from "../../config/firebase";
 import { useDispatch } from "react-redux";
 import { addUser } from "../../utils/reducSlice/userSlice";
-import { NETFLIX_POSTER, USER_AVATAR } from "../../constants/constants";
+import { MOVIE_POSTER, USER_AVATAR } from "../../constants/constants";
 import { useNavigate } from "react-router-dom";
 
 const Login = () => {
@@ -83,7 +83,7 @@ const Login = () => {
       <div className="absolute inset-0">
         <img
           className="w-full h-screen object-cover"
-          src={NETFLIX_POSTER}
+          src={MOVIE_POSTER}
           alt="logo"
         />
       </div>
@@ -124,7 +124,7 @@ const Login = () => {
         </button>
         <p className="py-4 cursor-pointer" onClick={toggleSignInForm}>
           {isSignInForm
-            ? "New to Netflix? Sign Up Now"
+            ? "New to Movies? Sign Up Now"
             : "Already registered? Sign In Now."}
         </p>
       </form>
